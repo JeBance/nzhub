@@ -15,6 +15,8 @@
 		- [cyclicMessagesCheck](#cyclicmessagesCheck)
 		- [getNet](#getNet)
 		- [getMessages](#getMessages)
+	- [Events](#events)
+		- [newMessage](#newMessage)
 	- [License](#license)
 
 
@@ -320,6 +322,21 @@ For more flexible interaction, use the `dbInitMessages` function.
 ```
 
 
+### Events
+
+All events are added to the "document" element.
+
+#### newMessage
+
+`newMessage` - returns the body of the message received from the node. To intercept this event, use the following code:
+
+```js
+document.addEventListener("newMessage", (event) => {
+	console.log(event.detail);
+});
+```
+
+
 ### License
 
-[GNU Lesser General Public License](https://www.gnu.org/licenses/lgpl-3.0.en.html) (3.0 or any later version). Please take a look at the [LICENSE](LICENSE) file for more information.
+[GNU Lesser General Public License](https://www.gnu.org/licenses/lgpl-3.0.en.html) (3.0 or any later version).

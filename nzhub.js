@@ -473,6 +473,9 @@ class nzhub {
 					if (message) {
 						message.net = node.net;
 						await this.addMessage(message);
+						document.dispatchEvent(new CustomEvent("newMessage", {
+							detail: message
+						}));
 					}
 				}
 			}
