@@ -39,6 +39,8 @@ Use the `new nzhub()` call to create a new object with all the listed methods.
 
 ```js
 const NZHUB = new nzhub({
+	checkingNodes: false,				// Nodes check cycle status. true/false
+	checkingMessages: false,			// Messages check cycle status. true/false
 	timeForCyclicNodesCheck: 3000,		// The period for checking and updating nodes in milliseconds.
 	timeForCyclicMessagesCheck: 3000,	// The period for checking and updating messages in milliseconds.
 	log: true
